@@ -1,5 +1,8 @@
-def test_add_to_basket_button(browser):
-    browser.get('http://selenium1py.pythonanywhere.com/catalogue/coders-at-work_207/')
-    browser.implicitly_wait(10)
-    button = browser.find_elements_by_class_name("btn.btn-lg.btn-primary.btn-add-to-basket")
-    assert button, "Can't find 'add to basket' button"
+from pages.main_page import MainPage
+
+
+def test_guest_can_go_to_login_page(browser):
+    link = "http://selenium1py.pythonanywhere.com/"
+    page = MainPage(browser, link)
+    page.open()
+    page.go_to_login_page()

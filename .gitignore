@@ -1,0 +1,5 @@
+/requirements.txt
+/environments/
+/.pytest_cache/
+/selenium_env/
+/.idea/
